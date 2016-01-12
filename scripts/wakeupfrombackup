@@ -1,0 +1,7 @@
+fastboot reboot-bootloader
+echo После загрузки bootloader нажмите любую клавишу...
+pause
+fastboot flash userdata data.img
+fastboot flash system system.img
+fastboot flash boot boot.img
+fastboot reboot

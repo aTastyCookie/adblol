@@ -1,0 +1,10 @@
+CID=$1
+
+./adb+ devices
+fastboot reboot-bootloader
+echo loading bootloader...
+pause
+fastboot oem writecid $CID
+fastboot reboot-bootloader
+fastboot getvar cid
+fastboot reboot

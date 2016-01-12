@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>Live @type of #device</title>
+  <link rel="stylesheet" type="text/css" href="common.css">
+</head>
+<body>
+  <div style="text-align: center; width: 100%; position: fixed; top:0">
+    <form class="toolbar">
+      <input type="hidden" name="device" value="#device">
+      <input type="hidden" name="accessKey" value="#accessKey">
+      <input type="hidden" name="type" value="@type">
+
+      <button type="submit">Set Video</button>
+      <label class="infoWithTip" title="Frames per Second. @MIN_FPS >= value <= @MAX_FPS">
+        Rate<input type="text" name="fps" size="2" value="@fps"/>
+      </label>
+      <label class="infoWithTip" title="Example: 0.5 or 800x400 or 800xAuto or Autox400 or Empty string means full size">
+        Scale<input type="text" name="scale" size="10" value="@scale"/>
+      </label>
+      <label title="live view or recording at this degree">Rotate
+        <select name="rotate">
+          <option value="" title="portrait">0°</option>
+          <option value="270" title="landscape">-90°</option>
+          <option value="90" disabled title="not recommended due to in this degree remote control functionality is not correctly implemented">90°</option>
+          <option value="180" disabled title="not recommended due to in this degree remote control functionality is not correctly implemented">180°</option>
+        </select>
+      </label>
+    </form>
+    <div style="position: absolute; width: 100%; text-align: right">
+      <a class="button" href="/saveImage?device=@device&accessKey=@accessKey" target="resultIFrame" title="Save Current Image To File On Server">
+        Save Image
+      </a>
+      <a href="/listSavedImages?device=@device&accessKey=@accessKey&type=@imageType&order=desc" target="list saved images $device" title="List All Saved Images">Saved Images</a>&nbsp;&nbsp;
+    </div>
+    <iframe class="toolbar" name="resultIFrame"></iframe>
+  </div>
+  <div style="position: fixed; right: 0; top: 62px; text-align: right">
+    <div><button onclick="rotateLocally(document.getElementById('viewer'), document.getElementById('viewerContainer'))">Rotate Locally</button></div>
+    <div><button onclick="scaleLocally(document.getElementById('viewerContainer'))">Scale Locally</button></div>
+    <div style="height:12px">&nbsp;</div>
+    <div>Device Keyboard:</div>
+    <div><a class="button" href="/sendKey?device=@device&accessKey=@accessKey&keyCode=26" target="resultIFrame">Power Key</a></div>
+    <div style="height:4px">&nbsp;</div>
+    <div><a class="button" href="/sendKey?device=@device&accessKey=@accessKey&keyCode=3" target="resultIFrame">Home Key</a></div>
+    <div><a class="button" href="/sendKey?device=@device&accessKey=@accessKey&keyCode=4" target="resultIFrame">Back Key</a></div>
+    <div><a class="button" href="/sendKey?device=@device&accessKey=@accessKey&keyCode=82" target="resultIFrame">Menu Key</a></div>
+    <div style="height:4px">&nbsp;</div>
+    <div>Device Orientation:</div>
+    <div><a class="button" href="/setOrientation?device=@device&accessKey=@accessKey&orientation=landscape" target="resultIFrame">Landscape</a></div>
+    <div><a class="button" href="/setOrientation?device=@device&accessKey=@accessKey&orientation=portrait" target="resultIFrame">Portrait</a></div>
+    <div><a class="button" href="/setOrientation?device=@device&accessKey=@accessKey&orientation=free" target="resultIFrame">Free</a></div>
+  </div>
+  <table id="viewerContainer" align="center" style="margin-top: 62px">
+    <tr><td align="center">
+      <img id="viewer" src="/capture?device=@device&accessKey=@accessKey&type=@type&fps=@fps&scale=@scale&rotate=@rotate"/>
+    </td></tr>
+  </table>
+  <script src="jquery-2.0.3.js" type="text/javascript"></script>
+  <script src="common.js" type="text/javascript"></script>
+  <script>
+    setTouchHandler(document.getElementById('viewer'), '/touch?device=@device&accessKey=@accessKey');
+  </script>
+</body>
+</html>

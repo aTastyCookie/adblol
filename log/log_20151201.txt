@@ -1,0 +1,648 @@
+05:50:25.340 ===================================pid:26776=======================================
+05:50:25.345 use configuration: {
+05:50:25.345   "adb": "adb",
+05:50:25.345   "adbOption": [
+05:50:25.345     "-H",
+05:50:25.345     "77.37.218.70"
+05:50:25.345   ],
+05:50:25.345   "ffmpeg": "ffmpeg",
+05:50:25.345   "port": 999,
+05:50:25.345   "ip": "*",
+05:50:25.345   "ssl": {
+05:50:25.345     "on": false,
+05:50:25.345     "certificateFilePath": "./ssl/stream_server.pfx"
+05:50:25.345   },
+05:50:25.345   "adminWeb": {
+05:50:25.345     "adminKey": "",
+05:50:25.345     "port": 666,
+05:50:25.345     "ip": "*",
+05:50:25.345     "ssl": {
+05:50:25.345       "on": false,
+05:50:25.345       "certificateFilePath": "./ssl/admin_server.pfx"
+05:50:25.345     }
+05:50:25.345   },
+05:50:25.345   "outputDir": "../out",
+05:50:25.345   "protectOutputDir": false,
+05:50:25.345   "maxRecordTimeSeconds": 7200,
+05:50:25.345   "keepAdbAliveIntervalSeconds": 240,
+05:50:25.345   "log": {
+05:50:25.345     "filePath": "../log/log.txt",
+05:50:25.345     "backupDays": 30
+05:50:25.345   },
+05:50:25.345   "ffmpegOption": {
+05:50:25.345     "SCL22": {
+05:50:25.345       "in": "-f rawvideo -s 1920x1080 -pix_fmt 0bgr"
+05:50:25.345     }
+05:50:25.345   }
+05:50:25.345 }
+05:50:25.401 [CheckAdb]Full path of "Android Debug Bridge" is "/usr/bin/adb"
+05:50:25.402 [CheckAdb]spawn adb with args: ["version"]
+05:50:25.412 [CheckAdb][pid_26778]spawned
+05:50:25.417 [CheckAdb][pid_26778]Android Debug Bridge version 1.0.31
+05:50:25.421 [CheckAdb][pid_26778]exited: 0 
+05:50:25.422 [CheckFfmpeg]Full path of FFMPEG is "ffmpeg"
+05:50:25.422 [CheckFfmpeg]spawn ffmpeg with args: ["-version"]
+05:50:25.423 [CheckFfmpeg][pid_26779]spawned
+05:50:25.424 [CheckFfmpeg][pid_26779]Error ENOENT(file is not found in dir list defined by PATH environment variable). File: ffmpeg, Please use full path or add the executable file's dir to `PATH` environment variable
+05:50:25.425 [CheckFfmpeg][pid_26779]exited: -1 
+05:50:25.425 Failed to check FFMPEG (for this machine, not for Android device). You will not be able to convert recorded video to other format. Please install it from "http://www.ffmpeg.org/download.html" and add the ffmpeg's dir to PATH env var or set full path of ffmpeg to stream.json conf.ffmpeg
+05:50:25.432 [AdminWebSrv]listen on *:666
+05:50:25.436 [StreamWebSrv]listen on *:999
+05:50:25.436 [GetAllDevices]spawn adb with args: ["-H","77.37.218.70","devices"]
+05:50:25.438 [GetAllDevices][pid_26780]spawned
+05:50:25.439 [AdminWebSrv]OK. You can start from http://localhost:666/?adminKey=
+05:50:25.439 [StreamWebSrv]OK
+06:06:30.806 ===================================pid:2882=======================================
+06:06:30.809 use configuration: {
+06:06:30.809   "adb": "adb",
+06:06:30.809   "ffmpeg": "ffmpeg",
+06:06:30.809   "port": 999,
+06:06:30.809   "ip": "naebator.com",
+06:06:30.809   "ssl": {
+06:06:30.809     "on": false,
+06:06:30.809     "certificateFilePath": "./ssl/stream_server.pfx"
+06:06:30.809   },
+06:06:30.809   "adminWeb": {
+06:06:30.809     "adminKey": "",
+06:06:30.809     "port": 666,
+06:06:30.809     "ip": "naebator.com",
+06:06:30.809     "ssl": {
+06:06:30.809       "on": false,
+06:06:30.809       "certificateFilePath": "./ssl/admin_server.pfx"
+06:06:30.809     }
+06:06:30.809   },
+06:06:30.809   "outputDir": "../out",
+06:06:30.809   "protectOutputDir": false,
+06:06:30.809   "maxRecordTimeSeconds": 7200,
+06:06:30.809   "keepAdbAliveIntervalSeconds": 240,
+06:06:30.809   "log": {
+06:06:30.809     "filePath": "../log/log.txt",
+06:06:30.809     "backupDays": 30
+06:06:30.809   },
+06:06:30.809   "ffmpegOption": {
+06:06:30.809     "SCL22": {
+06:06:30.809       "in": "-f rawvideo -s 1920x1080 -pix_fmt 0bgr"
+06:06:30.809     }
+06:06:30.809   }
+06:06:30.809 }
+06:06:30.848 [CheckAdb]Full path of "Android Debug Bridge" is "/usr/bin/adb"
+06:06:30.849 [CheckAdb]spawn adb with args: ["version"]
+06:06:30.855 [CheckAdb][pid_2884]spawned
+06:06:30.858 [CheckAdb][pid_2884]Android Debug Bridge version 1.0.31
+06:06:30.862 [CheckAdb][pid_2884]exited: 0 
+06:06:30.862 [CheckFfmpeg]Full path of FFMPEG is "/usr/local/bin/ffmpeg"
+06:06:30.862 [CheckFfmpeg]spawn ffmpeg with args: ["-version"]
+06:06:30.865 [CheckFfmpeg][pid_2885]spawned
+06:06:30.869 [CheckFfmpeg][pid_2885]ffmpeg version 1.2.4
+06:06:30.869 [CheckFfmpeg][pid_2885]built on Dec  1 2015 06:01:55 with gcc 4.8.3 (GCC) 20140911 (Red Hat 4.8.3-9)
+06:06:30.869 [CheckFfmpeg][pid_2885]configuration: 
+06:06:30.869 [CheckFfmpeg][pid_2885]libavutil      52. 18.100 / 52. 18.100
+06:06:30.869 [CheckFfmpeg][pid_2885]libavcodec     54. 92.100 / 54. 92.100
+06:06:30.869 [CheckFfmpeg][pid_2885]libavformat    54. 63.104 / 54. 63.104
+06:06:30.869 [CheckFfmpeg][pid_2885]libavdevice    54.  3.103 / 54.  3.103
+06:06:30.869 [CheckFfmpeg][pid_2885]libavfilter     3. 42.103 /  3. 42.103
+06:06:30.869 [CheckFfmpeg][pid_2885]libswscale      2.  2.100 /  2.  2.100
+06:06:30.869 [CheckFfmpeg][pid_2885]libswresample   0. 17.102 /  0. 17.102
+06:06:30.871 [CheckFfmpeg][pid_2885]exited: 0 
+06:06:30.883 [AdminWebSrv]listen on naebator.com:666
+06:06:30.887 [StreamWebSrv]listen on naebator.com:999
+06:06:30.887 [GetAllDevices]spawn adb with args: ["devices"]
+06:06:30.890 [GetAllDevices][pid_2890]spawned
+06:06:30.891 [GetAllDevices][pid_2890]List of devices attached 
+06:06:30.891 [GetAllDevices][pid_2890]10.8.0.8:5555	device
+06:06:30.891 [GetAllDevices][pid_2890]10.8.0.13:5555	device
+06:06:30.891 [GetAllDevices][pid_2890]10.8.0.18:5555	device
+06:06:30.891 [GetAllDevices][pid_2890]10.8.0.11:5555	device
+06:06:30.891 [GetAllDevices][pid_2890]10.8.0.10:5555	device
+06:06:30.891 [GetAllDevices][pid_2890]10.8.0.9:5555	device
+06:06:30.891 [GetAllDevices][pid_2890]10.8.0.15:5555	device
+06:06:30.891 [GetAllDevices][pid_2890]10.8.0.14:5555	device
+06:06:30.891 [GetAllDevices][pid_2890]10.8.0.19:5555	device
+06:06:30.891 [GetAllDevices][pid_2890]10.8.0.7:5555	device
+06:06:30.891 [GetAllDevices][pid_2890]10.8.0.5:5555	device
+06:06:30.891 [GetAllDevices][pid_2890]10.8.0.4:5555	device
+06:06:30.891 [GetAllDevices][pid_2890]
+06:06:30.891 [GetAllDevices][pid_2890]exited: 0 
+06:06:30.893 [GetDevInfo]spawn adb with args: ["-s","10.8.0.8:5555","shell","echo","`","getprop","ro.product.model;","getprop","ro.build.version.incremental;","getprop","ro.product.manufacturer;","getprop","ro.build.version.release;","getprop","ro.build.version.sdk;","getprop","ro.product.cpu.abi;","`"]
+06:06:30.894 [GetDevInfo][pid_2891]spawned
+06:06:31.126 [AdminWebSrv]Error: listen EADDRNOTAVAIL
+06:07:00.936 ===================================pid:2894=======================================
+06:07:00.939 use configuration: {
+06:07:00.939   "adb": "adb",
+06:07:00.939   "ffmpeg": "ffmpeg",
+06:07:00.939   "port": 999,
+06:07:00.939   "ip": "*",
+06:07:00.939   "ssl": {
+06:07:00.939     "on": false,
+06:07:00.939     "certificateFilePath": "./ssl/stream_server.pfx"
+06:07:00.939   },
+06:07:00.939   "adminWeb": {
+06:07:00.939     "adminKey": "",
+06:07:00.939     "port": 666,
+06:07:00.939     "ip": "*",
+06:07:00.939     "ssl": {
+06:07:00.939       "on": false,
+06:07:00.939       "certificateFilePath": "./ssl/admin_server.pfx"
+06:07:00.939     }
+06:07:00.939   },
+06:07:00.939   "outputDir": "../out",
+06:07:00.939   "protectOutputDir": false,
+06:07:00.939   "maxRecordTimeSeconds": 7200,
+06:07:00.939   "keepAdbAliveIntervalSeconds": 240,
+06:07:00.939   "log": {
+06:07:00.939     "filePath": "../log/log.txt",
+06:07:00.939     "backupDays": 30
+06:07:00.939   },
+06:07:00.939   "ffmpegOption": {
+06:07:00.939     "SCL22": {
+06:07:00.939       "in": "-f rawvideo -s 1920x1080 -pix_fmt 0bgr"
+06:07:00.939     }
+06:07:00.939   }
+06:07:00.939 }
+06:07:00.977 [CheckAdb]Full path of "Android Debug Bridge" is "/usr/bin/adb"
+06:07:00.977 [CheckAdb]spawn adb with args: ["version"]
+06:07:00.983 [CheckAdb][pid_2896]spawned
+06:07:00.986 [CheckAdb][pid_2896]Android Debug Bridge version 1.0.31
+06:07:00.990 [CheckAdb][pid_2896]exited: 0 
+06:07:00.990 [CheckFfmpeg]Full path of FFMPEG is "/usr/local/bin/ffmpeg"
+06:07:00.990 [CheckFfmpeg]spawn ffmpeg with args: ["-version"]
+06:07:00.993 [CheckFfmpeg][pid_2897]spawned
+06:07:00.996 [CheckFfmpeg][pid_2897]ffmpeg version 1.2.4
+06:07:00.996 [CheckFfmpeg][pid_2897]built on Dec  1 2015 06:01:55 with gcc 4.8.3 (GCC) 20140911 (Red Hat 4.8.3-9)
+06:07:00.996 [CheckFfmpeg][pid_2897]configuration: 
+06:07:00.996 [CheckFfmpeg][pid_2897]libavutil      52. 18.100 / 52. 18.100
+06:07:00.996 [CheckFfmpeg][pid_2897]libavcodec     54. 92.100 / 54. 92.100
+06:07:00.996 [CheckFfmpeg][pid_2897]libavformat    54. 63.104 / 54. 63.104
+06:07:00.996 [CheckFfmpeg][pid_2897]libavdevice    54.  3.103 / 54.  3.103
+06:07:00.996 [CheckFfmpeg][pid_2897]libavfilter     3. 42.103 /  3. 42.103
+06:07:00.996 [CheckFfmpeg][pid_2897]libswscale      2.  2.100 /  2.  2.100
+06:07:00.996 [CheckFfmpeg][pid_2897]libswresample   0. 17.102 /  0. 17.102
+06:07:00.997 [CheckFfmpeg][pid_2897]exited: 0 
+06:07:01.003 [AdminWebSrv]listen on *:666
+06:07:01.007 [StreamWebSrv]listen on *:999
+06:07:01.008 [GetAllDevices]spawn adb with args: ["devices"]
+06:07:01.009 [GetAllDevices][pid_2898]spawned
+06:07:01.010 [AdminWebSrv]Error: EADDRINUSE(IP or port already in use)
+06:09:55.322 ===================================pid:3044=======================================
+06:09:55.325 use configuration: {
+06:09:55.325   "adb": "adb",
+06:09:55.325   "ffmpeg": "ffmpeg",
+06:09:55.325   "port": 999,
+06:09:55.325   "ip": "*",
+06:09:55.325   "ssl": {
+06:09:55.325     "on": false,
+06:09:55.325     "certificateFilePath": "./ssl/stream_server.pfx"
+06:09:55.325   },
+06:09:55.325   "adminWeb": {
+06:09:55.325     "adminKey": "",
+06:09:55.325     "port": 666,
+06:09:55.325     "ip": "*",
+06:09:55.325     "ssl": {
+06:09:55.325       "on": false,
+06:09:55.325       "certificateFilePath": "./ssl/admin_server.pfx"
+06:09:55.325     }
+06:09:55.325   },
+06:09:55.325   "outputDir": "../out",
+06:09:55.325   "protectOutputDir": false,
+06:09:55.325   "maxRecordTimeSeconds": 7200,
+06:09:55.325   "keepAdbAliveIntervalSeconds": 240,
+06:09:55.325   "log": {
+06:09:55.325     "filePath": "../log/log.txt",
+06:09:55.325     "backupDays": 30
+06:09:55.325   },
+06:09:55.325   "ffmpegOption": {
+06:09:55.325     "SCL22": {
+06:09:55.325       "in": "-f rawvideo -s 1920x1080 -pix_fmt 0bgr"
+06:09:55.325     }
+06:09:55.325   }
+06:09:55.325 }
+06:09:55.364 [CheckAdb]Full path of "Android Debug Bridge" is "/usr/bin/adb"
+06:09:55.365 [CheckAdb]spawn adb with args: ["version"]
+06:09:55.372 [CheckAdb][pid_3046]spawned
+06:09:55.377 [CheckAdb][pid_3046]Android Debug Bridge version 1.0.31
+06:09:55.382 [CheckAdb][pid_3046]exited: 0 
+06:09:55.382 [CheckFfmpeg]Full path of FFMPEG is "/usr/local/bin/ffmpeg"
+06:09:55.382 [CheckFfmpeg]spawn ffmpeg with args: ["-version"]
+06:09:55.384 [CheckFfmpeg][pid_3047]spawned
+06:09:55.388 [CheckFfmpeg][pid_3047]ffmpeg version 1.2.4
+06:09:55.388 [CheckFfmpeg][pid_3047]built on Dec  1 2015 06:01:55 with gcc 4.8.3 (GCC) 20140911 (Red Hat 4.8.3-9)
+06:09:55.388 [CheckFfmpeg][pid_3047]configuration: 
+06:09:55.388 [CheckFfmpeg][pid_3047]libavutil      52. 18.100 / 52. 18.100
+06:09:55.388 [CheckFfmpeg][pid_3047]libavcodec     54. 92.100 / 54. 92.100
+06:09:55.388 [CheckFfmpeg][pid_3047]libavformat    54. 63.104 / 54. 63.104
+06:09:55.388 [CheckFfmpeg][pid_3047]libavdevice    54.  3.103 / 54.  3.103
+06:09:55.388 [CheckFfmpeg][pid_3047]libavfilter     3. 42.103 /  3. 42.103
+06:09:55.388 [CheckFfmpeg][pid_3047]libswscale      2.  2.100 /  2.  2.100
+06:09:55.388 [CheckFfmpeg][pid_3047]libswresample   0. 17.102 /  0. 17.102
+06:09:55.389 [CheckFfmpeg][pid_3047]exited: 0 
+06:09:55.396 [AdminWebSrv]listen on *:666
+06:09:55.402 [StreamWebSrv]listen on *:999
+06:09:55.402 [GetAllDevices]spawn adb with args: ["devices"]
+06:09:55.404 [GetAllDevices][pid_3048]spawned
+06:09:55.405 [AdminWebSrv]Error: EADDRINUSE(IP or port already in use)
+06:10:26.808 ===================================pid:3093=======================================
+06:10:26.810 use configuration: {
+06:10:26.810   "adb": "adb",
+06:10:26.810   "ffmpeg": "ffmpeg",
+06:10:26.810   "port": 1999,
+06:10:26.810   "ip": "*",
+06:10:26.810   "ssl": {
+06:10:26.810     "on": false,
+06:10:26.810     "certificateFilePath": "./ssl/stream_server.pfx"
+06:10:26.810   },
+06:10:26.810   "adminWeb": {
+06:10:26.810     "adminKey": "",
+06:10:26.810     "port": 666,
+06:10:26.810     "ip": "*",
+06:10:26.810     "ssl": {
+06:10:26.810       "on": false,
+06:10:26.810       "certificateFilePath": "./ssl/admin_server.pfx"
+06:10:26.810     }
+06:10:26.810   },
+06:10:26.810   "outputDir": "../out",
+06:10:26.810   "protectOutputDir": false,
+06:10:26.810   "maxRecordTimeSeconds": 7200,
+06:10:26.810   "keepAdbAliveIntervalSeconds": 240,
+06:10:26.810   "log": {
+06:10:26.810     "filePath": "../log/log.txt",
+06:10:26.810     "backupDays": 30
+06:10:26.810   },
+06:10:26.810   "ffmpegOption": {
+06:10:26.810     "SCL22": {
+06:10:26.810       "in": "-f rawvideo -s 1920x1080 -pix_fmt 0bgr"
+06:10:26.810     }
+06:10:26.810   }
+06:10:26.810 }
+06:10:26.841 [CheckAdb]Full path of "Android Debug Bridge" is "/usr/bin/adb"
+06:10:26.841 [CheckAdb]spawn adb with args: ["version"]
+06:10:26.846 [CheckAdb][pid_3095]spawned
+06:10:26.849 [CheckAdb][pid_3095]Android Debug Bridge version 1.0.31
+06:10:26.854 [CheckAdb][pid_3095]exited: 0 
+06:10:26.855 [CheckFfmpeg]Full path of FFMPEG is "/usr/local/bin/ffmpeg"
+06:10:26.855 [CheckFfmpeg]spawn ffmpeg with args: ["-version"]
+06:10:26.857 [CheckFfmpeg][pid_3096]spawned
+06:10:26.859 [CheckFfmpeg][pid_3096]ffmpeg version 1.2.4
+06:10:26.859 [CheckFfmpeg][pid_3096]built on Dec  1 2015 06:01:55 with gcc 4.8.3 (GCC) 20140911 (Red Hat 4.8.3-9)
+06:10:26.859 [CheckFfmpeg][pid_3096]configuration: 
+06:10:26.859 [CheckFfmpeg][pid_3096]libavutil      52. 18.100 / 52. 18.100
+06:10:26.859 [CheckFfmpeg][pid_3096]libavcodec     54. 92.100 / 54. 92.100
+06:10:26.859 [CheckFfmpeg][pid_3096]libavformat    54. 63.104 / 54. 63.104
+06:10:26.859 [CheckFfmpeg][pid_3096]libavdevice    54.  3.103 / 54.  3.103
+06:10:26.859 [CheckFfmpeg][pid_3096]libavfilter     3. 42.103 /  3. 42.103
+06:10:26.859 [CheckFfmpeg][pid_3096]libswscale      2.  2.100 /  2.  2.100
+06:10:26.859 [CheckFfmpeg][pid_3096]libswresample   0. 17.102 /  0. 17.102
+06:10:26.860 [CheckFfmpeg][pid_3096]exited: 0 
+06:10:26.865 [AdminWebSrv]listen on *:666
+06:10:26.869 [StreamWebSrv]listen on *:1999
+06:10:26.870 [GetAllDevices]spawn adb with args: ["devices"]
+06:10:26.871 [GetAllDevices][pid_3097]spawned
+06:10:26.871 [AdminWebSrv]Error: EADDRINUSE(IP or port already in use)
+06:10:40.289 ===================================pid:3099=======================================
+06:10:40.292 use configuration: {
+06:10:40.292   "adb": "adb",
+06:10:40.292   "ffmpeg": "ffmpeg",
+06:10:40.292   "port": 1999,
+06:10:40.292   "ip": "*",
+06:10:40.292   "ssl": {
+06:10:40.292     "on": false,
+06:10:40.292     "certificateFilePath": "./ssl/stream_server.pfx"
+06:10:40.292   },
+06:10:40.292   "adminWeb": {
+06:10:40.292     "adminKey": "",
+06:10:40.292     "port": 1666,
+06:10:40.292     "ip": "*",
+06:10:40.292     "ssl": {
+06:10:40.292       "on": false,
+06:10:40.292       "certificateFilePath": "./ssl/admin_server.pfx"
+06:10:40.292     }
+06:10:40.292   },
+06:10:40.292   "outputDir": "../out",
+06:10:40.292   "protectOutputDir": false,
+06:10:40.292   "maxRecordTimeSeconds": 7200,
+06:10:40.292   "keepAdbAliveIntervalSeconds": 240,
+06:10:40.292   "log": {
+06:10:40.292     "filePath": "../log/log.txt",
+06:10:40.292     "backupDays": 30
+06:10:40.292   },
+06:10:40.292   "ffmpegOption": {
+06:10:40.292     "SCL22": {
+06:10:40.292       "in": "-f rawvideo -s 1920x1080 -pix_fmt 0bgr"
+06:10:40.292     }
+06:10:40.292   }
+06:10:40.292 }
+06:10:40.324 [CheckAdb]Full path of "Android Debug Bridge" is "/usr/bin/adb"
+06:10:40.324 [CheckAdb]spawn adb with args: ["version"]
+06:10:40.330 [CheckAdb][pid_3101]spawned
+06:10:40.333 [CheckAdb][pid_3101]Android Debug Bridge version 1.0.31
+06:10:40.336 [CheckAdb][pid_3101]exited: 0 
+06:10:40.337 [CheckFfmpeg]Full path of FFMPEG is "/usr/local/bin/ffmpeg"
+06:10:40.337 [CheckFfmpeg]spawn ffmpeg with args: ["-version"]
+06:10:40.338 [CheckFfmpeg][pid_3102]spawned
+06:10:40.345 [CheckFfmpeg][pid_3102]ffmpeg version 1.2.4
+06:10:40.345 [CheckFfmpeg][pid_3102]built on Dec  1 2015 06:01:55 with gcc 4.8.3 (GCC) 20140911 (Red Hat 4.8.3-9)
+06:10:40.345 [CheckFfmpeg][pid_3102]configuration: 
+06:10:40.345 [CheckFfmpeg][pid_3102]libavutil      52. 18.100 / 52. 18.100
+06:10:40.345 [CheckFfmpeg][pid_3102]libavcodec     54. 92.100 / 54. 92.100
+06:10:40.345 [CheckFfmpeg][pid_3102]libavformat    54. 63.104 / 54. 63.104
+06:10:40.345 [CheckFfmpeg][pid_3102]libavdevice    54.  3.103 / 54.  3.103
+06:10:40.345 [CheckFfmpeg][pid_3102]libavfilter     3. 42.103 /  3. 42.103
+06:10:40.345 [CheckFfmpeg][pid_3102]libswscale      2.  2.100 /  2.  2.100
+06:10:40.345 [CheckFfmpeg][pid_3102]libswresample   0. 17.102 /  0. 17.102
+06:10:40.347 [CheckFfmpeg][pid_3102]exited: 0 
+06:10:40.359 [AdminWebSrv]listen on *:1666
+06:10:40.363 [StreamWebSrv]listen on *:1999
+06:10:40.364 [GetAllDevices]spawn adb with args: ["devices"]
+06:10:40.365 [GetAllDevices][pid_3103]spawned
+06:10:40.366 [AdminWebSrv]OK. You can start from http://localhost:1666/?adminKey=
+06:10:40.367 [StreamWebSrv]OK
+06:10:40.367 [GetAllDevices][pid_3103]List of devices attached 
+06:10:40.367 [GetAllDevices][pid_3103]10.8.0.8:5555	device
+06:10:40.367 [GetAllDevices][pid_3103]10.8.0.13:5555	device
+06:10:40.367 [GetAllDevices][pid_3103]10.8.0.18:5555	device
+06:10:40.367 [GetAllDevices][pid_3103]10.8.0.11:5555	device
+06:10:40.367 [GetAllDevices][pid_3103]10.8.0.10:5555	device
+06:10:40.367 [GetAllDevices][pid_3103]10.8.0.9:5555	device
+06:10:40.367 [GetAllDevices][pid_3103]10.8.0.15:5555	device
+06:10:40.367 [GetAllDevices][pid_3103]10.8.0.14:5555	device
+06:10:40.367 [GetAllDevices][pid_3103]10.8.0.19:5555	device
+06:10:40.367 [GetAllDevices][pid_3103]10.8.0.7:5555	device
+06:10:40.367 [GetAllDevices][pid_3103]10.8.0.5:5555	device
+06:10:40.367 [GetAllDevices][pid_3103]10.8.0.4:5555	device
+06:10:40.367 [GetAllDevices][pid_3103]
+06:10:40.368 [GetAllDevices][pid_3103]exited: 0 
+06:10:40.369 [GetDevInfo]spawn adb with args: ["-s","10.8.0.8:5555","shell","echo","`","getprop","ro.product.model;","getprop","ro.build.version.incremental;","getprop","ro.product.manufacturer;","getprop","ro.build.version.release;","getprop","ro.build.version.sdk;","getprop","ro.product.cpu.abi;","`"]
+06:10:40.370 [GetDevInfo][pid_3104]spawned
+06:10:41.370 [GetDevInfo][pid_3104]kill due to timeout
+06:10:41.371 [GetDevInfo][pid_3104]exited:  SIGKILL
+06:10:41.372 [GetDevInfo]spawn adb with args: ["-s","10.8.0.13:5555","shell","echo","`","getprop","ro.product.model;","getprop","ro.build.version.incremental;","getprop","ro.product.manufacturer;","getprop","ro.build.version.release;","getprop","ro.build.version.sdk;","getprop","ro.product.cpu.abi;","`"]
+06:10:41.374 [GetDevInfo][pid_3105]spawned
+06:10:41.757 [GetDevInfo][pid_3105]Nexus 6 58da060547 motorola 5.1.1 22 armeabi-v7a
+06:10:41.759 [GetDevInfo][pid_3105]exited: 0 
+06:10:41.760 [GetDevInfo]spawn adb with args: ["-s","10.8.0.18:5555","shell","echo","`","getprop","ro.product.model;","getprop","ro.build.version.incremental;","getprop","ro.product.manufacturer;","getprop","ro.build.version.release;","getprop","ro.build.version.sdk;","getprop","ro.product.cpu.abi;","`"]
+06:10:41.762 [GetDevInfo][pid_3106]spawned
+06:10:42.760 [GetDevInfo][pid_3106]kill due to timeout
+06:10:42.761 [GetDevInfo][pid_3106]exited:  SIGKILL
+06:10:42.761 [GetDevInfo]spawn adb with args: ["-s","10.8.0.11:5555","shell","echo","`","getprop","ro.product.model;","getprop","ro.build.version.incremental;","getprop","ro.product.manufacturer;","getprop","ro.build.version.release;","getprop","ro.build.version.sdk;","getprop","ro.product.cpu.abi;","`"]
+06:10:42.763 [GetDevInfo][pid_3108]spawned
+06:10:43.762 [GetDevInfo][pid_3108]kill due to timeout
+06:10:43.764 [GetDevInfo][pid_3108]exited:  SIGKILL
+06:10:43.764 [GetDevInfo]spawn adb with args: ["-s","10.8.0.10:5555","shell","echo","`","getprop","ro.product.model;","getprop","ro.build.version.incremental;","getprop","ro.product.manufacturer;","getprop","ro.build.version.release;","getprop","ro.build.version.sdk;","getprop","ro.product.cpu.abi;","`"]
+06:10:43.765 [GetDevInfo][pid_3110]spawned
+06:10:44.765 [GetDevInfo][pid_3110]kill due to timeout
+06:10:44.766 [GetDevInfo][pid_3110]exited:  SIGKILL
+06:10:44.766 [GetDevInfo]spawn adb with args: ["-s","10.8.0.9:5555","shell","echo","`","getprop","ro.product.model;","getprop","ro.build.version.incremental;","getprop","ro.product.manufacturer;","getprop","ro.build.version.release;","getprop","ro.build.version.sdk;","getprop","ro.product.cpu.abi;","`"]
+06:10:44.768 [GetDevInfo][pid_3112]spawned
+06:10:45.768 [GetDevInfo][pid_3112]kill due to timeout
+06:10:45.769 [GetDevInfo][pid_3112]exited:  SIGKILL
+06:10:45.769 [GetDevInfo]spawn adb with args: ["-s","10.8.0.15:5555","shell","echo","`","getprop","ro.product.model;","getprop","ro.build.version.incremental;","getprop","ro.product.manufacturer;","getprop","ro.build.version.release;","getprop","ro.build.version.sdk;","getprop","ro.product.cpu.abi;","`"]
+06:10:45.771 [GetDevInfo][pid_3113]spawned
+06:10:46.298 [GetDevInfo][pid_3113]Nexus 6 58da060547 motorola 5.1.1 22 armeabi-v7a
+06:10:46.298 [GetDevInfo][pid_3113]exited: 0 
+06:10:46.299 [GetDevInfo]spawn adb with args: ["-s","10.8.0.14:5555","shell","echo","`","getprop","ro.product.model;","getprop","ro.build.version.incremental;","getprop","ro.product.manufacturer;","getprop","ro.build.version.release;","getprop","ro.build.version.sdk;","getprop","ro.product.cpu.abi;","`"]
+06:10:46.300 [GetDevInfo][pid_3114]spawned
+06:10:46.658 [GetDevInfo][pid_3114]Nexus 6 58da060547 motorola 5.1.1 22 armeabi-v7a
+06:10:46.661 [GetDevInfo][pid_3114]exited: 0 
+06:10:46.664 [GetDevInfo]spawn adb with args: ["-s","10.8.0.19:5555","shell","echo","`","getprop","ro.product.model;","getprop","ro.build.version.incremental;","getprop","ro.product.manufacturer;","getprop","ro.build.version.release;","getprop","ro.build.version.sdk;","getprop","ro.product.cpu.abi;","`"]
+06:10:46.666 [GetDevInfo][pid_3115]spawned
+06:10:47.165 [GetDevInfo][pid_3115]Nexus 6 6ceb761b66 motorola 5.1.1 22 armeabi-v7a
+06:10:47.166 [GetDevInfo][pid_3115]exited: 0 
+06:10:47.166 [GetDevInfo]spawn adb with args: ["-s","10.8.0.7:5555","shell","echo","`","getprop","ro.product.model;","getprop","ro.build.version.incremental;","getprop","ro.product.manufacturer;","getprop","ro.build.version.release;","getprop","ro.build.version.sdk;","getprop","ro.product.cpu.abi;","`"]
+06:10:47.168 [GetDevInfo][pid_3116]spawned
+06:10:48.166 [GetDevInfo][pid_3116]kill due to timeout
+06:10:48.167 [GetDevInfo][pid_3116]exited:  SIGKILL
+06:10:48.167 [GetDevInfo]spawn adb with args: ["-s","10.8.0.5:5555","shell","echo","`","getprop","ro.product.model;","getprop","ro.build.version.incremental;","getprop","ro.product.manufacturer;","getprop","ro.build.version.release;","getprop","ro.build.version.sdk;","getprop","ro.product.cpu.abi;","`"]
+06:10:48.169 [GetDevInfo][pid_3117]spawned
+06:10:48.538 [GetDevInfo][pid_3117]Nexus 6 6ceb761b66 motorola 5.1.1 22 armeabi-v7a
+06:10:48.538 [GetDevInfo][pid_3117]exited: 0 
+06:10:48.538 [GetDevInfo]spawn adb with args: ["-s","10.8.0.4:5555","shell","echo","`","getprop","ro.product.model;","getprop","ro.build.version.incremental;","getprop","ro.product.manufacturer;","getprop","ro.build.version.release;","getprop","ro.build.version.sdk;","getprop","ro.product.cpu.abi;","`"]
+06:10:48.540 [GetDevInfo][pid_3118]spawned
+06:10:48.983 [GetDevInfo][pid_3118]Nexus 6 6ceb761b66 motorola 5.1.1 22 armeabi-v7a
+06:10:49.038 [GetDevInfo][pid_3118]exited: 0 
+06:13:21.994 ===================================pid:3266=======================================
+06:13:21.996 use configuration: {
+06:13:21.996   "adb": "adb",
+06:13:21.996   "ffmpeg": "ffmpeg",
+06:13:21.996   "port": 999,
+06:13:21.996   "ip": "*",
+06:13:21.996   "ssl": {
+06:13:21.996     "on": false,
+06:13:21.996     "certificateFilePath": "./ssl/stream_server.pfx"
+06:13:21.996   },
+06:13:21.996   "adminWeb": {
+06:13:21.996     "adminKey": "",
+06:13:21.996     "port": 666,
+06:13:21.996     "ip": "*",
+06:13:21.996     "ssl": {
+06:13:21.996       "on": false,
+06:13:21.996       "certificateFilePath": "./ssl/admin_server.pfx"
+06:13:21.996     }
+06:13:21.996   },
+06:13:21.996   "outputDir": "../out",
+06:13:21.996   "protectOutputDir": false,
+06:13:21.996   "maxRecordTimeSeconds": 7200,
+06:13:21.996   "keepAdbAliveIntervalSeconds": 240,
+06:13:21.996   "log": {
+06:13:21.996     "filePath": "../log/log.txt",
+06:13:21.996     "backupDays": 30
+06:13:21.996   },
+06:13:21.996   "ffmpegOption": {
+06:13:21.996     "SCL22": {
+06:13:21.996       "in": "-f rawvideo -s 1920x1080 -pix_fmt 0bgr"
+06:13:21.996     }
+06:13:21.996   }
+06:13:21.996 }
+06:13:22.032 [CheckAdb]Full path of "Android Debug Bridge" is "/usr/bin/adb"
+06:13:22.033 [CheckAdb]spawn adb with args: ["version"]
+06:13:22.038 [CheckAdb][pid_3268]spawned
+06:13:22.041 [CheckAdb][pid_3268]Android Debug Bridge version 1.0.31
+06:13:22.045 [CheckAdb][pid_3268]exited: 0 
+06:13:22.045 [CheckFfmpeg]Full path of FFMPEG is "/usr/local/bin/ffmpeg"
+06:13:22.045 [CheckFfmpeg]spawn ffmpeg with args: ["-version"]
+06:13:22.048 [CheckFfmpeg][pid_3269]spawned
+06:13:22.054 [CheckFfmpeg][pid_3269]ffmpeg version 1.2.4
+06:13:22.054 [CheckFfmpeg][pid_3269]built on Dec  1 2015 06:01:55 with gcc 4.8.3 (GCC) 20140911 (Red Hat 4.8.3-9)
+06:13:22.054 [CheckFfmpeg][pid_3269]configuration: 
+06:13:22.054 [CheckFfmpeg][pid_3269]libavutil      52. 18.100 / 52. 18.100
+06:13:22.054 [CheckFfmpeg][pid_3269]libavcodec     54. 92.100 / 54. 92.100
+06:13:22.054 [CheckFfmpeg][pid_3269]libavformat    54. 63.104 / 54. 63.104
+06:13:22.054 [CheckFfmpeg][pid_3269]libavdevice    54.  3.103 / 54.  3.103
+06:13:22.054 [CheckFfmpeg][pid_3269]libavfilter     3. 42.103 /  3. 42.103
+06:13:22.054 [CheckFfmpeg][pid_3269]libswscale      2.  2.100 /  2.  2.100
+06:13:22.054 [CheckFfmpeg][pid_3269]libswresample   0. 17.102 /  0. 17.102
+06:13:22.055 [CheckFfmpeg][pid_3269]exited: 0 
+06:13:22.066 [AdminWebSrv]listen on *:666
+06:13:22.071 [StreamWebSrv]listen on *:999
+06:13:22.071 [GetAllDevices]spawn adb with args: ["devices"]
+06:13:22.073 [GetAllDevices][pid_3270]spawned
+06:13:22.073 [AdminWebSrv]Error: EADDRINUSE(IP or port already in use)
+06:13:51.139 ===================================pid:3272=======================================
+06:13:51.141 use configuration: {
+06:13:51.141   "adb": "adb",
+06:13:51.141   "ffmpeg": "ffmpeg",
+06:13:51.141   "port": 999,
+06:13:51.141   "ip": "*",
+06:13:51.141   "ssl": {
+06:13:51.141     "on": false,
+06:13:51.141     "certificateFilePath": "./ssl/stream_server.pfx"
+06:13:51.141   },
+06:13:51.141   "adminWeb": {
+06:13:51.141     "adminKey": "",
+06:13:51.141     "port": 666,
+06:13:51.141     "ip": "naebator.com",
+06:13:51.141     "ssl": {
+06:13:51.141       "on": false,
+06:13:51.141       "certificateFilePath": "./ssl/admin_server.pfx"
+06:13:51.141     }
+06:13:51.141   },
+06:13:51.141   "outputDir": "../out",
+06:13:51.141   "protectOutputDir": false,
+06:13:51.141   "maxRecordTimeSeconds": 7200,
+06:13:51.141   "keepAdbAliveIntervalSeconds": 240,
+06:13:51.141   "log": {
+06:13:51.141     "filePath": "../log/log.txt",
+06:13:51.141     "backupDays": 30
+06:13:51.141   },
+06:13:51.141   "ffmpegOption": {
+06:13:51.141     "SCL22": {
+06:13:51.141       "in": "-f rawvideo -s 1920x1080 -pix_fmt 0bgr"
+06:13:51.141     }
+06:13:51.141   }
+06:13:51.141 }
+06:13:51.174 [CheckAdb]Full path of "Android Debug Bridge" is "/usr/bin/adb"
+06:13:51.175 [CheckAdb]spawn adb with args: ["version"]
+06:13:51.180 [CheckAdb][pid_3274]spawned
+06:13:51.183 [CheckAdb][pid_3274]Android Debug Bridge version 1.0.31
+06:13:51.187 [CheckAdb][pid_3274]exited: 0 
+06:13:51.187 [CheckFfmpeg]Full path of FFMPEG is "/usr/local/bin/ffmpeg"
+06:13:51.187 [CheckFfmpeg]spawn ffmpeg with args: ["-version"]
+06:13:51.189 [CheckFfmpeg][pid_3275]spawned
+06:13:51.191 [CheckFfmpeg][pid_3275]ffmpeg version 1.2.4
+06:13:51.191 [CheckFfmpeg][pid_3275]built on Dec  1 2015 06:01:55 with gcc 4.8.3 (GCC) 20140911 (Red Hat 4.8.3-9)
+06:13:51.191 [CheckFfmpeg][pid_3275]configuration: 
+06:13:51.191 [CheckFfmpeg][pid_3275]libavutil      52. 18.100 / 52. 18.100
+06:13:51.191 [CheckFfmpeg][pid_3275]libavcodec     54. 92.100 / 54. 92.100
+06:13:51.191 [CheckFfmpeg][pid_3275]libavformat    54. 63.104 / 54. 63.104
+06:13:51.191 [CheckFfmpeg][pid_3275]libavdevice    54.  3.103 / 54.  3.103
+06:13:51.191 [CheckFfmpeg][pid_3275]libavfilter     3. 42.103 /  3. 42.103
+06:13:51.191 [CheckFfmpeg][pid_3275]libswscale      2.  2.100 /  2.  2.100
+06:13:51.191 [CheckFfmpeg][pid_3275]libswresample   0. 17.102 /  0. 17.102
+06:13:51.192 [CheckFfmpeg][pid_3275]exited: 0 
+06:13:51.197 [AdminWebSrv]listen on naebator.com:666
+06:13:51.200 [StreamWebSrv]listen on *:999
+06:13:51.203 [GetAllDevices]spawn adb with args: ["devices"]
+06:13:51.204 [GetAllDevices][pid_3280]spawned
+06:13:51.205 [StreamWebSrv]Error: EADDRINUSE(IP or port already in use)
+06:14:02.553 ===================================pid:3331=======================================
+06:14:02.556 use configuration: {
+06:14:02.556   "adb": "adb",
+06:14:02.556   "ffmpeg": "ffmpeg",
+06:14:02.556   "port": 999,
+06:14:02.556   "ip": "*",
+06:14:02.556   "ssl": {
+06:14:02.556     "on": false,
+06:14:02.556     "certificateFilePath": "./ssl/stream_server.pfx"
+06:14:02.556   },
+06:14:02.556   "adminWeb": {
+06:14:02.556     "adminKey": "",
+06:14:02.556     "port": 6616,
+06:14:02.556     "ip": "naebator.com",
+06:14:02.556     "ssl": {
+06:14:02.556       "on": false,
+06:14:02.556       "certificateFilePath": "./ssl/admin_server.pfx"
+06:14:02.556     }
+06:14:02.556   },
+06:14:02.556   "outputDir": "../out",
+06:14:02.556   "protectOutputDir": false,
+06:14:02.556   "maxRecordTimeSeconds": 7200,
+06:14:02.556   "keepAdbAliveIntervalSeconds": 240,
+06:14:02.556   "log": {
+06:14:02.556     "filePath": "../log/log.txt",
+06:14:02.556     "backupDays": 30
+06:14:02.556   },
+06:14:02.556   "ffmpegOption": {
+06:14:02.556     "SCL22": {
+06:14:02.556       "in": "-f rawvideo -s 1920x1080 -pix_fmt 0bgr"
+06:14:02.556     }
+06:14:02.556   }
+06:14:02.556 }
+06:14:02.590 [CheckAdb]Full path of "Android Debug Bridge" is "/usr/bin/adb"
+06:14:02.591 [CheckAdb]spawn adb with args: ["version"]
+06:14:02.596 [CheckAdb][pid_3333]spawned
+06:14:02.600 [CheckAdb][pid_3333]Android Debug Bridge version 1.0.31
+06:14:02.603 [CheckAdb][pid_3333]exited: 0 
+06:14:02.604 [CheckFfmpeg]Full path of FFMPEG is "/usr/local/bin/ffmpeg"
+06:14:02.604 [CheckFfmpeg]spawn ffmpeg with args: ["-version"]
+06:14:02.606 [CheckFfmpeg][pid_3334]spawned
+06:14:02.608 [CheckFfmpeg][pid_3334]ffmpeg version 1.2.4
+06:14:02.608 [CheckFfmpeg][pid_3334]built on Dec  1 2015 06:01:55 with gcc 4.8.3 (GCC) 20140911 (Red Hat 4.8.3-9)
+06:14:02.608 [CheckFfmpeg][pid_3334]configuration: 
+06:14:02.608 [CheckFfmpeg][pid_3334]libavutil      52. 18.100 / 52. 18.100
+06:14:02.608 [CheckFfmpeg][pid_3334]libavcodec     54. 92.100 / 54. 92.100
+06:14:02.608 [CheckFfmpeg][pid_3334]libavformat    54. 63.104 / 54. 63.104
+06:14:02.608 [CheckFfmpeg][pid_3334]libavdevice    54.  3.103 / 54.  3.103
+06:14:02.608 [CheckFfmpeg][pid_3334]libavfilter     3. 42.103 /  3. 42.103
+06:14:02.608 [CheckFfmpeg][pid_3334]libswscale      2.  2.100 /  2.  2.100
+06:14:02.608 [CheckFfmpeg][pid_3334]libswresample   0. 17.102 /  0. 17.102
+06:14:02.609 [CheckFfmpeg][pid_3334]exited: 0 
+06:14:02.615 [AdminWebSrv]listen on naebator.com:6616
+06:14:02.618 [StreamWebSrv]listen on *:999
+06:14:02.620 [GetAllDevices]spawn adb with args: ["devices"]
+06:14:02.622 [GetAllDevices][pid_3339]spawned
+06:14:02.622 [StreamWebSrv]Error: EADDRINUSE(IP or port already in use)
+06:14:18.356 ===================================pid:3343=======================================
+06:14:18.358 use configuration: {
+06:14:18.358   "adb": "adb",
+06:14:18.358   "ffmpeg": "ffmpeg",
+06:14:18.358   "port": 9919,
+06:14:18.358   "ip": "naebator.com",
+06:14:18.358   "ssl": {
+06:14:18.358     "on": false,
+06:14:18.358     "certificateFilePath": "./ssl/stream_server.pfx"
+06:14:18.358   },
+06:14:18.358   "adminWeb": {
+06:14:18.358     "adminKey": "",
+06:14:18.358     "port": 6616,
+06:14:18.358     "ip": "naebator.com",
+06:14:18.358     "ssl": {
+06:14:18.358       "on": false,
+06:14:18.358       "certificateFilePath": "./ssl/admin_server.pfx"
+06:14:18.358     }
+06:14:18.358   },
+06:14:18.358   "outputDir": "../out",
+06:14:18.358   "protectOutputDir": false,
+06:14:18.358   "maxRecordTimeSeconds": 7200,
+06:14:18.358   "keepAdbAliveIntervalSeconds": 240,
+06:14:18.358   "log": {
+06:14:18.358     "filePath": "../log/log.txt",
+06:14:18.358     "backupDays": 30
+06:14:18.358   },
+06:14:18.358   "ffmpegOption": {
+06:14:18.358     "SCL22": {
+06:14:18.358       "in": "-f rawvideo -s 1920x1080 -pix_fmt 0bgr"
+06:14:18.358     }
+06:14:18.358   }
+06:14:18.358 }
+06:14:18.395 [CheckAdb]Full path of "Android Debug Bridge" is "/usr/bin/adb"
+06:14:18.395 [CheckAdb]spawn adb with args: ["version"]
+06:14:18.402 [CheckAdb][pid_3345]spawned
+06:14:18.407 [CheckAdb][pid_3345]Android Debug Bridge version 1.0.31
+06:14:18.412 [CheckAdb][pid_3345]exited: 0 
+06:14:18.413 [CheckFfmpeg]Full path of FFMPEG is "/usr/local/bin/ffmpeg"
+06:14:18.413 [CheckFfmpeg]spawn ffmpeg with args: ["-version"]
+06:14:18.415 [CheckFfmpeg][pid_3346]spawned
+06:14:18.417 [CheckFfmpeg][pid_3346]ffmpeg version 1.2.4
+06:14:18.417 [CheckFfmpeg][pid_3346]built on Dec  1 2015 06:01:55 with gcc 4.8.3 (GCC) 20140911 (Red Hat 4.8.3-9)
+06:14:18.417 [CheckFfmpeg][pid_3346]configuration: 
+06:14:18.417 [CheckFfmpeg][pid_3346]libavutil      52. 18.100 / 52. 18.100
+06:14:18.417 [CheckFfmpeg][pid_3346]libavcodec     54. 92.100 / 54. 92.100
+06:14:18.417 [CheckFfmpeg][pid_3346]libavformat    54. 63.104 / 54. 63.104
+06:14:18.417 [CheckFfmpeg][pid_3346]libavdevice    54.  3.103 / 54.  3.103
+06:14:18.417 [CheckFfmpeg][pid_3346]libavfilter     3. 42.103 /  3. 42.103
+06:14:18.417 [CheckFfmpeg][pid_3346]libswscale      2.  2.100 /  2.  2.100
+06:14:18.417 [CheckFfmpeg][pid_3346]libswresample   0. 17.102 /  0. 17.102
+06:14:18.418 [CheckFfmpeg][pid_3346]exited: 0 
+06:14:18.427 [AdminWebSrv]listen on naebator.com:6616
+06:14:18.431 [StreamWebSrv]listen on naebator.com:9919
+06:14:18.432 [GetAllDevices]spawn adb with args: ["devices"]
+06:14:18.434 [GetAllDevices][pid_3351]spawned
+06:14:18.438 [StreamWebSrv]Error: listen EADDRNOTAVAIL

@@ -1,0 +1,133 @@
+body {margin: 0; padding-left: 1px; padding-right: 1px; padding-bottom: 0; padding-top: 0}
+table {border-collapse: collapse}
+button {font-size: 1em}
+a {margin-left: 2px; margin-right: 2px; display: inline-block}
+.errorWithTip {color: red}
+.infoWithTip {color: #0000C0}
+div.expandable {background-color: ghostwhite; border: 1px solid black; border-bottom: 1px solid darkgray; z-index: 98}
+.expandable > * {display: none}
+.expandable > *:first-child {display:inline-block}
+span.expandable > *:first-child {text-decoration: underline}
+div.expandable > *:first-child {background-color: #ececec; height: 24px}
+div.expandable:hover {z-index: 99}
+.expandable:hover > * {display: inline-block}
+.expandable:hover > *:first-child {display: none}
+.button {
+    font-size: 1em;
+    height: 20px;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 0px 6px 4px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+.code {
+    width: 100%;
+    background-color: #f5f5f5;
+    font-size: smaller;
+    text-align: left;
+    padding: 4px;
+    white-space: nowrap;
+    overflow-x: auto;
+    border: 1px solid black;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+td ul {margin: 0; padding: 0}
+td ul li {list-style-position: inside}
+a.internal {color: lightskyblue}
+a.caution {color: lightblue}
+.toolbar {background-color: ghostwhite; z-index: 97;}
+.toolbar a {font-weight: bold}
+iframe.toolbar{
+    width: 100%;
+    height: 28px;
+    border: 1px solid lightgray;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+label.fillParent {display: inline-block; width: 100%; height: 100%; text-align: center}
+
+#viewer {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    min-height: 300px;
+}
+#viewerContainer {
+    min-width: 300px;
+    background-color: #A0A0A0;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.rotate90 {
+    transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+}
+.rotate180 {
+    transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -ms-transform:rotate(180deg);
+}
+.rotate270 {
+    transform:rotate(270deg);
+    -webkit-transform:rotate(270deg);
+    -moz-transform:rotate(270deg);
+    -ms-transform:rotate(270deg);
+}
+.scale50 {
+    transform:scale(0.5, 0.5);
+    -webkit-transform:scale(0.5, 0.5);
+    -moz-transform:scale(0.5, 0.5);
+    -ms-transform:scale(0.5, 0.5);
+}
+.scale25 {
+    transform:scale(0.25, 0.25);
+    -webkit-transform:scale(0.25, 0.25);
+    -moz-transform:scale(0.25, 0.25);
+    -ms-transform:scale(0.25, 0.25);
+}
+
+#darkMask {
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    bottom: 1px;
+    left: 0;
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+
+.mediaType {
+    font-size: larger; font-weight: bold;
+    color: blue;
+    border: 1px solid black;
+    padding: 2px;
+}
+.fileDesc {
+    font-family: monospace, fixed;
+    font-size: large;
+}
+
+.liveViewIndicator {background-color: blue; color: yellow}
+.recordingIndicator {background-color: blue; color: yellow}
+#totalRecordedFileSize.highlight {color: blue; font-weight: bold}
+.disconnected {background-color: #ededf4}
+.deviceErr {background-color: #ededf4; color: red}
+
+.underWorking {background-color: #EEEEEE; font-size: xx-small}
+.unrecommended {background-color: #EEEEEE; color:darkgray}

@@ -1,0 +1,14 @@
+adb wait-for-device
+adb push build.prop /build.prop
+adb shell "su -c 'stop ric'"
+adb shell "su -c 'busybox pkill -f /sbin/ric'"
+adb shell "su -c 'mount -ro remount,rw /'"
+adb shell "su -c 'chmod 0440 /sbin/ric'"
+adb shell "su -c 'stop ric'"
+adb shell "su -c 'busybox pkill -f /sbin/ric'"
+adb shell "su -c 'mount -ro remount,rw /system'"
+adb shell "su -c 'busybox cp -af /build.prop /system/build.prop'"
+adb shell "su -c 'chmod 0744 /system/build.prop'"
+adb shell "su -c 'rm /build.prop'"
+adb shell "exit"
+adb kill-server

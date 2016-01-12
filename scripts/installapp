@@ -1,0 +1,15 @@
+APPLICATION=$1
+
+./adb+ shell am start -n com.android.vending/com.google.android.finsky.activities.LaunchUrlHandlerActivity https://play.google.com/store/apps/details?id=$APPLICATION
+
+sleep 5
+
+./adb+ shell input tap 238 280
+
+sleep 2
+
+./adb+ shell input tap 222 353
+
+sleep 15
+
+./adb+ shell input tap 235 275
